@@ -24,6 +24,11 @@ beforeEach(() => {
     getAccount = new GetAccount();
 });
 
+afterEach(async () => {
+    await databaseConnection.close();
+    jest.resetAllMocks();
+});
+
 test("Deve fazer a criação da conta de um usuário do tipo passageiro", async function () {
     const input = {
         name: "John Doe",
