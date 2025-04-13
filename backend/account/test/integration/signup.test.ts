@@ -25,7 +25,6 @@ beforeEach(() => {
 });
 
 afterEach(async () => {
-    await databaseConnection.close();
     jest.resetAllMocks();
 });
 
