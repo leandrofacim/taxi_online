@@ -19,16 +19,6 @@ jobs:
     - name: Build and test backend
       run: |
         cd backend/account
-        npm install
-        npx jest
-    
-    - name: Build Docker images
-      run: docker-compose build
-    
-    - name: Run Docker Compose
-      run: docker-compose up -d
-    
-    - name: Run tests in Docker
-      run: |
-        docker-compose exec backend npm test
-        docker-compose exec frontend npm test 
+        npm ci
+        npm run build
+        npm run test:ci
