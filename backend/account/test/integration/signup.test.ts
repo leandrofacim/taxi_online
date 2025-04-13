@@ -24,11 +24,6 @@ beforeEach(() => {
     getAccount = new GetAccount();
 });
 
-afterEach(async () => {
-    jest.resetAllMocks();
-    sinon.restore();
-});
-
 test("Deve fazer a criação da conta de um usuário do tipo passageiro", async function () {
     const input = {
         name: "John Doe",
@@ -233,4 +228,7 @@ test("Deve fazer a criação da conta de um usuário do tipo passageiro com fake
 
 afterEach(async () => {
     await databaseConnection.close();
+    jest.resetAllMocks();
+    sinon.restore();
 });
+
