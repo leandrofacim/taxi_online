@@ -26,6 +26,7 @@ beforeEach(() => {
 
 afterEach(async () => {
     jest.resetAllMocks();
+    sinon.restore();
 });
 
 test("Deve fazer a criação da conta de um usuário do tipo passageiro", async function () {
