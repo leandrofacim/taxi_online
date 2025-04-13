@@ -6,7 +6,9 @@
   "scripts": {
     "docker:start": "docker compose up -d",
     "docker:stop": "docker compose stop",
-    "docker:clean": "docker compose rm -fsv"
+    "docker:clean": "docker compose rm -fsv",
+    "test": "jest",
+    "test:ci": "jest --ci"
   },
   "dependencies": {
     "@hapi/hapi": "^21.3.9",
